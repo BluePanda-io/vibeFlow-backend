@@ -146,6 +146,11 @@ module.exports = `
         updateServer(fields:updateServerInput): ServerTemplate
 
 
+        #  ---------- STATE TRACKER MUTATIONS -------
+        saveStateValue(fields:saveStateValueInput): StateTracker
+        createFakeStateTrackerData(fields:createFakeStateTrackerDataInput): [StateTracker]
+
+
         #  ---------- GRANT MUTATIONS -------
         updateGrant(fields:updateGrantInput): GrantTemplate
         addNodesToGrant(fields:addNodesToGrantInput): GrantTemplate

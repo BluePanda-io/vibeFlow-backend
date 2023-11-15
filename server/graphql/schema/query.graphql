@@ -99,6 +99,12 @@ module.exports = `
             #  ---------- SERVER QUERY -------
             findServers(fields:findServersInput): [ServerTemplate]
 
+
+
+          #  ---------- STATE TRACKER QUERY -------
+            findStateValues(fields:findStateValuesInput): [StateTracker]
+            showChartStateValues(fields:showChartStateValuesInput): [chartValueStateTracker]
+
             #  ---------- GRANT QUERY -------
             findGrants(fields:findGrantsInput): [GrantTemplate]
 

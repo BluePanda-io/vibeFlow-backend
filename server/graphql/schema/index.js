@@ -8,6 +8,7 @@ const reviewType = require("./review.graphql");
 const projectType = require("./project.graphql");
 const projectUpdateType = require("./projectUpdate.graphql");
 const skillsType = require("./skills.graphql");
+const stateTrackerType = require("./stateTracker.graphql");
 const nodeType = require("./node.graphql");
 const conversationType = require("./conversation.graphql");
 const positionType = require("./position.graphql");
@@ -37,6 +38,7 @@ const typeDefs = gql`
   ${mutation}
   ${userType}
   ${skillsType}
+  ${stateTrackerType}
   ${nodeType}
   ${conversationType}
   ${questionsEdenAI}

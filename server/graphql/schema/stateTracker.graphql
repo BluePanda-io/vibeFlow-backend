@@ -1,0 +1,59 @@
+module.exports = `
+    
+    type StateTracker {
+        userID: ID
+        name: String
+        type: typeStateTrackerEnum
+        value: Int
+        timeStamp: Date
+    }
+
+    enum typeStateTrackerEnum {
+        ENERGY
+        HAPPINESS
+        PRODUCTIVITY
+        STRESS
+    }
+
+    input saveStateValueInput {
+        userID: ID
+        name: String
+        type: typeStateTrackerEnum
+        value: Int
+        timeStamp: Date
+    }
+
+    input findStateValuesInput {
+        userID: ID
+        name: String
+        type: typeStateTrackerEnum
+        startDate: Date
+        endDate: Date
+    }
+
+    input createFakeStateTrackerDataInput {
+        userID: ID
+        name: String
+        type: typeStateTrackerEnum
+        numberOfFakeData: Int
+        valueMin: Int
+        valueMax: Int
+        startDate: Date
+        endDate: Date
+    }
+
+    input showChartStateValuesInput {
+        userID: ID
+        name: String
+        type: typeStateTrackerEnum
+        startDate: Date
+        endDate: Date
+        numberChartPoints: Int
+    }
+
+    type chartValueStateTracker {
+        timeStamp: Date
+        value: Float
+    }
+
+`

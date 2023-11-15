@@ -176,8 +176,9 @@ async function generate12DigitID(inputString) {
 // }
 
 module.exports = {
-  addNewMember: combineResolvers(
-    IsAuthenticated,
+  addNewMember: 
+  // combineResolvers(
+  //   IsAuthenticated,
     async (parent, args, context, info) => {
       const {
         discordName,
@@ -191,11 +192,11 @@ module.exports = {
         serverID,
       } = args.fields;
 
-      if (
-        !context.user &&
-        context.user.accessLevel > ACCESS_LEVELS.OPERATOR_ACCESS
-      )
-        throw new ApolloError("Not Authorized");
+      // if (
+      //   !context.user &&
+      //   context.user.accessLevel > ACCESS_LEVELS.OPERATOR_ACCESS
+      // )
+      //   throw new ApolloError("Not Authorized");
 
       console.log("Mutation > addNewMember > args.fields = ", args.fields);
 
@@ -300,8 +301,8 @@ module.exports = {
           { component: "tmemberQuery > addNewMember" }
         );
       }
-    }
-  ),
+    },
+  // ),
   updateMember:
     // combineResolvers(
     //   IsAuthenticated,

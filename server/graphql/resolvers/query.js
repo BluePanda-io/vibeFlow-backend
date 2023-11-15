@@ -89,6 +89,7 @@ const {
   findRoleTemplates,
 } = require("./query/roleTemplateQuery");
 const { findServers } = require("./query/serverQuery");
+const { findStateValues,showChartStateValues } = require("./query/stateTrackerQuery");
 const { findGrants } = require("./query/grantQuery");
 const { findRoom, findRooms } = require("./query/roomQuery");
 const {
@@ -256,6 +257,9 @@ module.exports = {
 
     // ------------- SERVER TEMPLATE QUERY -----------------
     findServers,
+
+    // ------------- STATE TRACKER QUERY -----------------
+    findStateValues,showChartStateValues,
 
     // ------------- GRANT TEMPLATE QUERY -----------------
     findGrants,
