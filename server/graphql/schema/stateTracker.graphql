@@ -31,6 +31,19 @@ module.exports = `
         endDate: Date
     }
 
+    input findStateChartOptimalInfoInput {
+        userID: ID
+        type: typeStateTrackerEnum
+    }
+
+    type findStateChartOptimalInfoOutput {
+        chartPoints: Int
+        chartMinDate: Date
+        chartMaxDate: Date
+        chartStartDate: Date
+        chartEndDate: Date
+    }
+
     input createFakeStateTrackerDataInput {
         userID: ID
         name: String
