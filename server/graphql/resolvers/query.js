@@ -89,7 +89,7 @@ const {
   findRoleTemplates,
 } = require("./query/roleTemplateQuery");
 const { findServers } = require("./query/serverQuery");
-const { findStateValues,showChartStateValues } = require("./query/stateTrackerQuery");
+const { findStateValues,findStateChartOptimalInfo,showChartStateValues } = require("./query/stateTrackerQuery");
 const { findGrants } = require("./query/grantQuery");
 const { findRoom, findRooms } = require("./query/roomQuery");
 const {
@@ -259,7 +259,7 @@ module.exports = {
     findServers,
 
     // ------------- STATE TRACKER QUERY -----------------
-    findStateValues,showChartStateValues,
+    findStateValues,findStateChartOptimalInfo,showChartStateValues,
 
     // ------------- GRANT TEMPLATE QUERY -----------------
     findGrants,

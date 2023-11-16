@@ -103,6 +103,7 @@ module.exports = `
 
           #  ---------- STATE TRACKER QUERY -------
             findStateValues(fields:findStateValuesInput): [StateTracker]
+            findStateChartOptimalInfo(fields:findStateChartOptimalInfoInput): findStateChartOptimalInfoOutput
             showChartStateValues(fields:showChartStateValuesInput): [chartValueStateTracker]
 
             #  ---------- GRANT QUERY -------
