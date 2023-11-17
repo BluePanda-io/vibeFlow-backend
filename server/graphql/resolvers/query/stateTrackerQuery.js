@@ -157,6 +157,14 @@ module.exports = {
       let startDateObj = new Date(startDate)
       let endDateObj = new Date(endDate)
       let difference = endDateObj.getTime() - startDateObj.getTime()
+      let numberOfDays = difference / (1000 * 60 * 60 * 24);
+
+      if (numberOfDays <= numberChartPoints+1 && numberChartPoints >= stateTrackerDataAll.length) {
+        return stateTrackerDataAll.map(data => ({
+          timeStamp: data.timeStamp,
+          value: data.value
+        }));
+      }
 
       let interval = difference / numberChartPoints
 
