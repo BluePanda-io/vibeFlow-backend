@@ -44,8 +44,8 @@ function mapRange(input, inputMin, inputMax, outputMin, outputMax) {
 
 module.exports = {
   findMember:
-    // combineResolvers(
-    //IsAuthenticated,
+    combineResolvers(
+    IsAuthenticated,
     async (parent, args, context, info) => {
       const { _id, serverID, discordName, telegramChatID } = args.fields;
       console.log("Query > findMember > args.fields = ", args.fields);
@@ -84,6 +84,8 @@ module.exports = {
         memberData = await Members.findOne(searchTerm);
         // console.log("memberData = ", memberData);
 
+        
+
         return memberData;
       } catch (err) {
         throw new ApolloError(
@@ -95,7 +97,7 @@ module.exports = {
         );
       }
     },
-  // ),
+  ),
 
   findMembers: async (parent, args, context, info) => {
     const { _id, serverID } = args.fields;
