@@ -15,7 +15,7 @@ const token = async ({ body }, res) => {
     const { accessToken } = body;
     console.log("start accessing the token here ", accessToken);
     console.log("process.env.GOOGLE_CLIENT_ID ", process.env.GOOGLE_CLIENT_ID);
-
+    console.log('f')
     // Verify the token from Google and extract user information
     const ticket = await client.verifyIdToken({
       idToken: accessToken,
