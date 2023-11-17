@@ -148,6 +148,7 @@ module.exports = `
 
         #  ---------- STATE TRACKER MUTATIONS -------
         saveStateValue(fields:saveStateValueInput): StateTracker
+        deleteStateTrackData(fields:deleteStateTrackDataInput): [StateTracker]
         createFakeStateTrackerData(fields:createFakeStateTrackerDataInput): [StateTracker]
 
 

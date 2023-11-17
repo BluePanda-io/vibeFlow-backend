@@ -118,7 +118,7 @@ const {
 
 const { updateRoleTemplate } = require("./mutation/roleTemplateMutation");
 const { updateServer } = require("./mutation/serverMutation");
-const { saveStateValue,createFakeStateTrackerData } = require("./mutation/stateTrackerMutation");
+const { saveStateValue,deleteStateTrackData,createFakeStateTrackerData } = require("./mutation/stateTrackerMutation");
 const {
   updateGrant,
   addNodesToGrant,
@@ -318,7 +318,7 @@ module.exports = {
 
 
     // ------------- STATE TRACKER MUTATION -----------------
-    saveStateValue,createFakeStateTrackerData,
+    saveStateValue,deleteStateTrackData,createFakeStateTrackerData,
 
     // ------------- GRANT MUTATION -----------------
     updateGrant,

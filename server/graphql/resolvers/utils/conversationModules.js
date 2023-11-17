@@ -1,3 +1,4 @@
+require("dotenv").config();
 const { QuestionsEdenAI } = require("../../../models/questionsEdenAIModel");
 const { Conversation } = require("../../../models/conversationModel");
 const { Members } = require("../../../models/membersModel");
@@ -13,19 +14,12 @@ require("dotenv").config();
 const { useGPTchatSimple } = require("../utils/aiExtraModules");
 
 function chooseAPIkey(chooseAPI = "") {
-  // openAI_keys = [
-  //   "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",
-  //   // "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",
-  //   "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",
-  //   "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",
-  // ];
-
-  let openAI_keys = ["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"];
+  let openAI_keys = [process.env.REACT_APP_OPENAI_1];
 
   if (chooseAPI == "API 2") {
-    openAI_keys = ["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"];
+    openAI_keys = [process.env.REACT_APP_OPENAI_2];
   } else if (chooseAPI == "API 1") {
-    openAI_keys = ["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"];
+    openAI_keys = [process.env.REACT_APP_OPENAI_1];
   }
 
   // randomly choose one of the keys

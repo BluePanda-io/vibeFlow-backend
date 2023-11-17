@@ -56,6 +56,34 @@ module.exports = {
       );
     }
   },
+  deleteStateTrackData: async (parent, args, context, info) => {
+    const {userID,type,} = args.fields;
+    console.log("Mutation > deleteStateTrackData > args.fields = ", args.fields);
+
+    
+    try {
+
+      let filter = {}
+
+      if (userID) filter.userID = userID
+      if (type) filter.type = type
+
+      const stateTrackerData = await StateTracker.deleteMany(filter);
+
+      printC(stateTrackerData, "1", "stateTrackerData", "b")
+
+      return stateTrackerData
+
+
+    } catch (err) {
+      printC(err, "-1", "err", "r");
+      throw new ApolloError(
+        err.message,
+        err.extensions?.code || "DATABASE_FIND_TWEET_ERROR",
+        { component: "stateTrackerMutation > deleteStateTrackData" }
+      );
+    }
+  },
   createFakeStateTrackerData: async (parent, args, context, info) => {
     const {userID,name,type,numberOfFakeData,valueMin,valueMax,startDate,endDate} = args.fields;
     console.log("Mutation > createFakeStateTrackerData > args.fields = ", args.fields);

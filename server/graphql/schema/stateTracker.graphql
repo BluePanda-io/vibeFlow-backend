@@ -23,6 +23,11 @@ module.exports = `
         timeStamp: Date
     }
 
+    input deleteStateTrackDataInput {
+        userID: ID
+        type: typeStateTrackerEnum
+    }
+
     input findStateValuesInput {
         userID: ID
         name: String
