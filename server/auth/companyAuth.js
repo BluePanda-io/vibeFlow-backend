@@ -43,7 +43,7 @@ const companyAuth = async ({ body }, res) => {
       },
     });
   } catch (error) {
-    console.log("the error is ", error);
+    // console.log("the error is ", error);
     if (error.message === "Unauthorized user") {
       res.status(401).send({ error: error.message });
     } else if (error.message === "Company does not exist") {

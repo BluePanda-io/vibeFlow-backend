@@ -99,12 +99,15 @@ module.exports = {
 
         chartPoints = 30
       } else {
+        
         chartStartDate = chartMinDate
 
-        // chartPoints is equal to the number of days between chartMinDate and chartMaxDate
-        chartPoints = (chartMaxDate.getTime() - chartMinDate.getTime()) / (24 * 60 * 60 * 1000)
+        // // chartPoints is equal to the number of days between chartMinDate and chartMaxDate
+        // chartPoints = (chartMaxDate.getTime() - chartMinDate.getTime()) / (24 * 60 * 60 * 1000)
 
-        chartPoints = parseInt(chartPoints) + 1
+        // chartPoints = parseInt(chartPoints) + 1
+
+        chartPoints = stateTrackerDataAll.length
       }
 
     

@@ -172,8 +172,8 @@ async function generate12DigitID(inputString) {
 
 module.exports = {
   addNewMember: 
-  // combineResolvers(
-  //   IsAuthenticated,
+  combineResolvers(
+    IsAuthenticated,
     async (parent, args, context, info) => {
       const {
         discordName,
@@ -297,10 +297,10 @@ module.exports = {
         );
       }
     },
-  // ),
+  ),
   updateMember:
-    // combineResolvers(
-    //   IsAuthenticated,
+    combineResolvers(
+      IsAuthenticated,
     async (parent, args, { user }, info) => {
       const {
         discordName,
@@ -732,7 +732,7 @@ module.exports = {
         );
       }
     },
-  // ),
+  ),
 
   addNodesToMember:
     // combineResolvers(
